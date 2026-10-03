@@ -1,0 +1,2050 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>G W Eletromecânica | Mecânica, Elétrica e Peças Automotivas</title>
+
+  <meta
+    name="description"
+    content="G W Eletromecânica — serviços automotivos, elétrica, mecânica, peças e acessórios em Vitória da Conquista - BA."
+  >
+
+  <meta
+    name="keywords"
+    content="G W Eletromecânica, oficina mecânica, elétrica automotiva, peças automotivas, Vitória da Conquista, mecânica"
+  >
+
+  <meta name="author" content="G W Eletromecânica">
+
+  <meta name="theme-color" content="#e50914">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="G W Eletromecânica">
+  <meta
+    property="og:description"
+    content="Soluções em mecânica, elétrica e peças automotivas."
+  >
+  <meta property="og:type" content="website">
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Ícones -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <style>
+
+    /* =========================================================
+       RESET
+    ========================================================= */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", Arial, sans-serif;
+      background: #080808;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+      font-family: inherit;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: 0 auto;
+    }
+
+    /* =========================================================
+       CORES
+    ========================================================= */
+
+    :root {
+      --red: #e50914;
+      --red-dark: #b8060f;
+      --black: #080808;
+      --black-2: #101010;
+      --black-3: #161616;
+      --gray: #999;
+      --light: #f4f4f4;
+      --border: rgba(255,255,255,.09);
+    }
+
+    /* =========================================================
+       HEADER
+    ========================================================= */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(5,5,5,.92);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: -.5px;
+    }
+
+    .logo-icon {
+      width: 43px;
+      height: 43px;
+      background: var(--red);
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      font-size: 21px;
+      box-shadow: 0 8px 30px rgba(229,9,20,.25);
+    }
+
+    .logo span {
+      color: var(--red);
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .menu a {
+      color: #ddd;
+      font-size: 14px;
+      font-weight: 600;
+      transition: .25s;
+    }
+
+    .menu a:hover {
+      color: var(--red);
+    }
+
+    .nav-button {
+      background: var(--red);
+      padding: 12px 18px;
+      border-radius: 8px;
+      color: white !important;
+    }
+
+    .nav-button:hover {
+      background: var(--red-dark);
+      transform: translateY(-1px);
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 0;
+      background: transparent;
+      color: white;
+      font-size: 25px;
+      cursor: pointer;
+    }
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
+    .hero {
+      min-height: 100vh;
+      padding-top: 76px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(90deg,
+          rgba(0,0,0,.95) 0%,
+          rgba(0,0,0,.82) 42%,
+          rgba(0,0,0,.42) 100%
+        ),
+        radial-gradient(
+          circle at 80% 40%,
+          rgba(229,9,20,.25),
+          transparent 35%
+        ),
+        #090909;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      right: -200px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(229,9,20,.09);
+      border-radius: 50%;
+      filter: blur(20px);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 760px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 13px;
+      border: 1px solid rgba(229,9,20,.4);
+      background: rgba(229,9,20,.08);
+      border-radius: 30px;
+      color: #ff5b62;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .7px;
+      margin-bottom: 22px;
+    }
+
+    .badge i {
+      color: var(--red);
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 6vw, 76px);
+      line-height: 1.02;
+      letter-spacing: -3px;
+      font-weight: 900;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 span {
+      color: var(--red);
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: #bdbdbd;
+      font-size: 18px;
+      margin-bottom: 35px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 13px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 23px;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 14px;
+      transition: .25s;
+    }
+
+    .btn-primary {
+      background: var(--red);
+      color: white;
+      box-shadow: 0 10px 30px rgba(229,9,20,.22);
+    }
+
+    .btn-primary:hover {
+      background: #ff1823;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,.18);
+      background: rgba(255,255,255,.03);
+      color: white;
+    }
+
+    .btn-outline:hover {
+      background: white;
+      color: black;
+    }
+
+    /* =========================================================
+       STATS
+    ========================================================= */
+
+    .stats {
+      background: #0d0d0d;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .stat {
+      padding: 28px 20px;
+      text-align: center;
+      border-right: 1px solid var(--border);
+    }
+
+    .stat:last-child {
+      border-right: 0;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 25px;
+      font-weight: 900;
+      color: white;
+    }
+
+    .stat span {
+      color: #888;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .7px;
+    }
+
+    /* =========================================================
+       SEÇÕES
+    ========================================================= */
+
+    section {
+      padding: 100px 0;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 55px;
+    }
+
+    .section-label {
+      color: var(--red);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+
+    .section-header h2 {
+      font-size: clamp(32px, 4vw, 47px);
+      line-height: 1.1;
+      letter-spacing: -1.8px;
+      margin-bottom: 16px;
+    }
+
+    .section-header p {
+      color: #929292;
+      font-size: 15px;
+    }
+
+    /* =========================================================
+       SERVIÇOS
+    ========================================================= */
+
+    .services {
+      background: #0a0a0a;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .service-card {
+      background: linear-gradient(145deg,#151515,#0e0e0e);
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      padding: 30px;
+      position: relative;
+      overflow: hidden;
+      transition: .3s;
+    }
+
+    .service-card::after {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      right: -50px;
+      bottom: -50px;
+      background: var(--red);
+      opacity: .06;
+      border-radius: 50%;
+    }
+
+    .service-card:hover {
+      border-color: rgba(229,9,20,.45);
+      transform: translateY(-5px);
+    }
+
+    .service-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      background: rgba(229,9,20,.1);
+      color: var(--red);
+      display: grid;
+      place-items: center;
+      font-size: 21px;
+      margin-bottom: 20px;
+    }
+
+    .service-card h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      color: #8d8d8d;
+      font-size: 14px;
+    }
+
+    /* =========================================================
+       SOBRE
+    ========================================================= */
+
+    .about {
+      background: #0e0e0e;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .about-visual {
+      min-height: 470px;
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+      background:
+        linear-gradient(135deg,
+          rgba(229,9,20,.85),
+          rgba(0,0,0,.9)
+        );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .about-visual::before {
+      content: "";
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border: 50px solid rgba(255,255,255,.06);
+      border-radius: 50%;
+    }
+
+    .about-logo {
+      position: relative;
+      text-align: center;
+      z-index: 2;
+    }
+
+    .about-logo i {
+      font-size: 90px;
+      color: white;
+      margin-bottom: 15px;
+    }
+
+    .about-logo h3 {
+      font-size: 42px;
+      font-weight: 900;
+    }
+
+    .about-content h2 {
+      font-size: clamp(32px, 4vw, 48px);
+      line-height: 1.1;
+      letter-spacing: -2px;
+      margin-bottom: 20px;
+    }
+
+    .about-content h2 span {
+      color: var(--red);
+    }
+
+    .about-content > p {
+      color: #969696;
+      margin-bottom: 25px;
+    }
+
+    .check-list {
+      list-style: none;
+      display: grid;
+      gap: 15px;
+    }
+
+    .check-list li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #ddd;
+      font-size: 14px;
+    }
+
+    .check-list i {
+      color: var(--red);
+    }
+
+    /* =========================================================
+       CTA
+    ========================================================= */
+
+    .cta {
+      padding: 75px 0;
+      background:
+        linear-gradient(90deg,
+          rgba(229,9,20,.96),
+          rgba(174,0,10,.96)
+        );
+    }
+
+    .cta-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .cta h2 {
+      font-size: clamp(28px,4vw,45px);
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+
+    .cta p {
+      color: rgba(255,255,255,.78);
+    }
+
+    .cta .btn {
+      background: white;
+      color: var(--red);
+      white-space: nowrap;
+    }
+
+    /* =========================================================
+       ORÇAMENTO
+    ========================================================= */
+
+    .contact {
+      background: #080808;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .contact-info h2 {
+      font-size: 40px;
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    .contact-info > p {
+      color: #888;
+      margin-bottom: 30px;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 24px;
+    }
+
+    .contact-item-icon {
+      flex-shrink: 0;
+      width: 43px;
+      height: 43px;
+      border-radius: 9px;
+      background: rgba(229,9,20,.1);
+      color: var(--red);
+      display: grid;
+      place-items: center;
+    }
+
+    .contact-item strong {
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .contact-item span {
+      color: #888;
+      font-size: 13px;
+    }
+
+    .form {
+      background: #111;
+      border: 1px solid var(--border);
+      padding: 30px;
+      border-radius: 15px;
+    }
+
+    .form h3 {
+      margin-bottom: 22px;
+      font-size: 23px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    .form-group label {
+      color: #aaa;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      background: #080808;
+      border: 1px solid #252525;
+      color: white;
+      padding: 13px 14px;
+      border-radius: 8px;
+      outline: none;
+      transition: .2s;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--red);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .form-submit {
+      margin-top: 18px;
+      width: 100%;
+    }
+
+    /* =========================================================
+       LOCALIZAÇÃO
+    ========================================================= */
+
+    .location {
+      background: #0d0d0d;
+    }
+
+    .location-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-radius: 15px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      min-height: 350px;
+    }
+
+    .map {
+      background:
+        linear-gradient(
+          rgba(0,0,0,.5),
+          rgba(0,0,0,.5)
+        ),
+        #1b1b1b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 350px;
+    }
+
+    .map-inner {
+      text-align: center;
+    }
+
+    .map-inner i {
+      color: var(--red);
+      font-size: 50px;
+      margin-bottom: 15px;
+    }
+
+    .map-inner p {
+      color: #999;
+      margin-bottom: 15px;
+    }
+
+    .location-info {
+      background: #111;
+      padding: 40px;
+    }
+
+    .location-info h3 {
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+
+    .address {
+      color: #999;
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+
+    .address strong {
+      display: block;
+      color: white;
+      margin-bottom: 5px;
+    }
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    footer {
+      background: #050505;
+      border-top: 1px solid var(--border);
+      padding: 55px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 50px;
+      margin-bottom: 40px;
+    }
+
+    .footer-brand p {
+      max-width: 400px;
+      color: #777;
+      font-size: 13px;
+      margin-top: 16px;
+    }
+
+    footer h4 {
+      margin-bottom: 18px;
+      font-size: 14px;
+    }
+
+    footer ul {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+
+    footer li,
+    footer li a {
+      color: #777;
+      font-size: 13px;
+    }
+
+    footer li a:hover {
+      color: var(--red);
+    }
+
+    .footer-bottom {
+      padding-top: 22px;
+      border-top: 1px solid var(--border);
+      color: #555;
+      font-size: 11px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    /* =========================================================
+       WHATSAPP
+    ========================================================= */
+
+    .whatsapp {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      width: 57px;
+      height: 57px;
+      border-radius: 50%;
+      background: #25d366;
+      color: white;
+      display: grid;
+      place-items: center;
+      font-size: 27px;
+      z-index: 999;
+      box-shadow: 0 8px 30px rgba(37,211,102,.3);
+      transition: .25s;
+    }
+
+    .whatsapp:hover {
+      transform: scale(1.08);
+    }
+
+    /* =========================================================
+       ANIMAÇÃO
+    ========================================================= */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(25px);
+      transition: .7s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =========================================================
+       RESPONSIVO
+    ========================================================= */
+
+    @media (max-width: 900px) {
+
+      .menu {
+        position: absolute;
+        top: 76px;
+        left: 0;
+        width: 100%;
+        background: #080808;
+        border-bottom: 1px solid var(--border);
+        padding: 20px;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .menu.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-button {
+        width: 100%;
+        text-align: center;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stat:nth-child(2) {
+        border-right: 0;
+      }
+
+      .stat:nth-child(-n+2) {
+        border-bottom: 1px solid var(--border);
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .about-grid,
+      .contact-grid,
+      .location-box {
+        grid-template-columns: 1fr;
+      }
+
+      .about-visual {
+        min-height: 350px;
+      }
+
+      .cta-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .nav {
+        height: 68px;
+      }
+
+      .hero {
+        padding-top: 68px;
+      }
+
+      .hero h1 {
+        letter-spacing: -2px;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      section {
+        padding: 70px 0;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-group.full {
+        grid-column: auto;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .location-info {
+        padding: 28px;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .stat {
+        padding: 22px 10px;
+      }
+
+      .stat strong {
+        font-size: 20px;
+      }
+
+      .hero-buttons .btn {
+        width: 100%;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- =======================================================
+       HEADER
+  ======================================================== -->
+
+  <header>
+
+    <div class="container nav">
+
+      <a href="#inicio" class="logo">
+
+        <div class="logo-icon">
+          <i class="fa-solid fa-gears"></i>
+        </div>
+
+        G W <span>Eletromecânica</span>
+
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Abrir menu"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="menu" id="menu">
+
+        <li>
+          <a href="#inicio">Início</a>
+        </li>
+
+        <li>
+          <a href="#servicos">Serviços</a>
+        </li>
+
+        <li>
+          <a href="#sobre">Sobre</a>
+        </li>
+
+        <li>
+          <a href="#localizacao">Localização</a>
+        </li>
+
+        <li>
+          <a href="#contato" class="nav-button">
+            Orçamento
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </header>
+
+
+  <!-- =======================================================
+       HERO
+  ======================================================== -->
+
+  <main>
+
+    <section class="hero" id="inicio">
+
+      <div class="container">
+
+        <div class="hero-content reveal">
+
+          <div class="badge">
+            <i class="fa-solid fa-circle-check"></i>
+            Soluções automotivas
+          </div>
+
+          <h1>
+            Seu carro em boas mãos.
+            <span>Seu caminho seguro.</span>
+          </h1>
+
+          <p>
+            Soluções em mecânica, elétrica automotiva,
+            peças e serviços para manter seu veículo
+            funcionando com segurança e desempenho.
+          </p>
+
+          <div class="hero-buttons">
+
+            <!-- ALTERE O NÚMERO DO WHATSAPP AQUI -->
+            <a
+              href="https://wa.me/5577999999999"
+              target="_blank"
+              class="btn btn-primary"
+            >
+              <i class="fa-brands fa-whatsapp"></i>
+              Falar pelo WhatsApp
+            </a>
+
+            <a
+              href="#servicos"
+              class="btn btn-outline"
+            >
+              Conhecer serviços
+              <i class="fa-solid fa-arrow-down"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ESTATÍSTICAS
+    ====================================================== -->
+
+    <div class="stats">
+
+      <div class="container stats-grid">
+
+        <div class="stat">
+          <strong>+8</strong>
+          <span>Anos de experiência</span>
+        </div>
+
+        <div class="stat">
+          <strong>Auto</strong>
+          <span>Soluções automotivas</span>
+        </div>
+
+        <div class="stat">
+          <strong>BA</strong>
+          <span>Vitória da Conquista</span>
+        </div>
+
+        <div class="stat">
+          <strong>100%</strong>
+          <span>Compromisso</span>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         SERVIÇOS
+    ====================================================== -->
+
+    <section class="services" id="servicos">
+
+      <div class="container">
+
+        <div class="section-header reveal">
+
+          <div class="section-label">
+            Nossos serviços
+          </div>
+
+          <h2>
+            Tudo para cuidar do seu veículo
+          </h2>
+
+          <p>
+            Conte com uma estrutura preparada para
+            serviços de manutenção e soluções automotivas.
+          </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+          <article class="service-card reveal">
+
+            <div class="service-icon">
+              <i class="fa-solid fa-car"></i>
+            </div>
+
+            <h3>Mecânica Automotiva</h3>
+
+            <p>
+              Manutenção e reparos para diferentes sistemas
+              do veículo, buscando segurança e confiabilidade.
+            </p>
+
+          </article>
+
+
+          <article class="service-card reveal">
+
+            <div class="service-icon">
+              <i class="fa-solid fa-bolt"></i>
+            </div>
+
+            <h3>Elétrica Automotiva</h3>
+
+            <p>
+              Diagnóstico e manutenção de sistemas elétricos
+              e componentes do veículo.
+            </p>
+
+          </article>
+
+
+          <article class="service-card reveal">
+
+            <div class="service-icon">
+              <i class="fa-solid fa-gears"></i>
+            </div>
+
+            <h3>Peças e Acessórios</h3>
+
+            <p>
+              Comércio de peças, componentes e acessórios
+              para aplicações automotivas.
+            </p>
+
+          </article>
+
+
+          <article class="service-card reveal">
+
+            <div class="service-icon">
+              <i class="fa-solid fa-gauge-high"></i>
+            </div>
+
+            <h3>Diagnóstico</h3>
+
+            <p>
+              Identificação de problemas para auxiliar na
+              manutenção adequada do seu veículo.
+            </p>
+
+          </article>
+
+
+          <article class="service-card reveal">
+
+            <div class="service-icon">
+              <i class="fa-solid fa-wrench"></i>
+            </div>
+
+            <h3>Manutenção</h3>
+
+            <p>
+              Serviços preventivos e corretivos para
+              preservar o funcionamento do veículo.
+            </p>
+
+          </article>
+
+
+          <article class="service-card reveal">
+
+            <div class="service-icon">
+              <i class="fa-solid fa-car-burst"></i>
+            </div>
+
+            <h3>Reparos Automotivos</h3>
+
+            <p>
+              Soluções para diferentes necessidades de
+              manutenção e reparação automotiva.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SOBRE
+    ====================================================== -->
+
+    <section class="about" id="sobre">
+
+      <div class="container about-grid">
+
+        <div class="about-visual reveal">
+
+          <div class="about-logo">
+
+            <i class="fa-solid fa-car-side"></i>
+
+            <h3>G W</h3>
+
+            <p>ELETROMECÂNICA</p>
+
+          </div>
+
+        </div>
+
+
+        <div class="about-content reveal">
+
+          <div class="section-label">
+            Sobre a empresa
+          </div>
+
+          <h2>
+            Experiência para
+            <span>cuidar do seu carro.</span>
+          </h2>
+
+          <p>
+            A G W Eletromecânica atua no segmento automotivo,
+            oferecendo serviços e soluções para manutenção de
+            veículos e comercialização de peças e acessórios.
+          </p>
+
+          <p>
+            Nosso objetivo é oferecer atendimento profissional,
+            transparência e soluções adequadas para cada
+            necessidade.
+          </p>
+
+          <ul class="check-list">
+
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              Atendimento profissional
+            </li>
+
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              Serviços automotivos
+            </li>
+
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              Peças e acessórios
+            </li>
+
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              Compromisso com o cliente
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CTA
+    ====================================================== -->
+
+    <section class="cta">
+
+      <div class="container cta-content">
+
+        <div>
+
+          <h2>
+            Precisa de um orçamento?
+          </h2>
+
+          <p>
+            Entre em contato e fale com nossa equipe.
+          </p>
+
+        </div>
+
+        <!-- ALTERE O NÚMERO DO WHATSAPP -->
+        <a
+          href="https://wa.me/5577999999999"
+          target="_blank"
+          class="btn"
+        >
+          <i class="fa-brands fa-whatsapp"></i>
+          Solicitar orçamento
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CONTATO
+    ====================================================== -->
+
+    <section class="contact" id="contato">
+
+      <div class="container contact-grid">
+
+        <div class="contact-info reveal">
+
+          <div class="section-label">
+            Fale conosco
+          </div>
+
+          <h2>
+            Vamos cuidar do seu veículo?
+          </h2>
+
+          <p>
+            Envie uma mensagem para solicitar informações
+            ou consultar um orçamento.
+          </p>
+
+
+          <div class="contact-item">
+
+            <div class="contact-item-icon">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+
+            <div>
+
+              <strong>Endereço</strong>
+
+              <span>
+                Avenida Presidente Dutra, 2006<br>
+                Bairro Brasil<br>
+                Vitória da Conquista - BA
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="contact-item">
+
+            <div class="contact-item-icon">
+              <i class="fa-solid fa-file-invoice"></i>
+            </div>
+
+            <div>
+
+              <strong>CNPJ</strong>
+
+              <span>
+                30.131.128/0001-55
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="contact-item">
+
+            <div class="contact-item-icon">
+              <i class="fa-solid fa-clock"></i>
+            </div>
+
+            <div>
+
+              <strong>Atendimento</strong>
+
+              <span>
+                Consulte nossa equipe para confirmar
+                horários de atendimento.
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- FORMULÁRIO -->
+
+        <form
+          class="form reveal"
+          id="orcamentoForm"
+        >
+
+          <h3>
+            Solicite um orçamento
+          </h3>
+
+
+          <div class="form-grid">
+
+            <div class="form-group">
+
+              <label for="nome">
+                Nome
+              </label>
+
+              <input
+                type="text"
+                id="nome"
+                placeholder="Seu nome"
+                required
+              >
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="telefone">
+                Telefone
+              </label>
+
+              <input
+                type="tel"
+                id="telefone"
+                placeholder="(00) 00000-0000"
+                required
+              >
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="veiculo">
+                Veículo
+              </label>
+
+              <input
+                type="text"
+                id="veiculo"
+                placeholder="Ex.: Corolla 2020"
+              >
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="servico">
+                Serviço
+              </label>
+
+              <select id="servico">
+
+                <option value="">
+                  Selecione
+                </option>
+
+                <option>
+                  Mecânica
+                </option>
+
+                <option>
+                  Elétrica
+                </option>
+
+                <option>
+                  Peças e acessórios
+                </option>
+
+                <option>
+                  Diagnóstico
+                </option>
+
+                <option>
+                  Manutenção
+                </option>
+
+                <option>
+                  Outro
+                </option>
+
+              </select>
+
+            </div>
+
+
+            <div class="form-group full">
+
+              <label for="mensagem">
+                Mensagem
+              </label>
+
+              <textarea
+                id="mensagem"
+                placeholder="Descreva o que você precisa..."
+              ></textarea>
+
+            </div>
+
+          </div>
+
+
+          <button
+            type="submit"
+            class="btn btn-primary form-submit"
+          >
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+            Enviar pelo WhatsApp
+
+          </button>
+
+        </form>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         LOCALIZAÇÃO
+    ====================================================== -->
+
+    <section class="location" id="localizacao">
+
+      <div class="container">
+
+        <div class="section-header reveal">
+
+          <div class="section-label">
+            Onde estamos
+          </div>
+
+          <h2>
+            Encontre nossa unidade
+          </h2>
+
+          <p>
+            Estamos localizados em Vitória da Conquista,
+            na Bahia.
+          </p>
+
+        </div>
+
+
+        <div class="location-box reveal">
+
+          <div class="map">
+
+            <div class="map-inner">
+
+              <i class="fa-solid fa-location-dot"></i>
+
+              <p>
+                Avenida Presidente Dutra, 2006
+              </p>
+
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Avenida+Presidente+Dutra+2006+Vitória+da+Conquista+BA"
+                target="_blank"
+                class="btn btn-primary"
+              >
+                <i class="fa-solid fa-map"></i>
+                Abrir no Google Maps
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <div class="location-info">
+
+            <h3>
+              G W Eletromecânica
+            </h3>
+
+            <div class="address">
+
+              <strong>
+                Endereço
+              </strong>
+
+              Avenida Presidente Dutra, 2006<br>
+              Bairro Brasil<br>
+              Vitória da Conquista - BA<br>
+              CEP 45051-030
+
+            </div>
+
+
+            <div class="address">
+
+              <strong>
+                CNPJ
+              </strong>
+
+              30.131.128/0001-55
+
+            </div>
+
+
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Avenida+Presidente+Dutra+2006+Vitória+da+Conquista+BA"
+              target="_blank"
+              class="btn btn-outline"
+            >
+              Como chegar
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =======================================================
+       FOOTER
+  ======================================================== -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+
+        <div class="footer-brand">
+
+          <a href="#inicio" class="logo">
+
+            <div class="logo-icon">
+              <i class="fa-solid fa-gears"></i>
+            </div>
+
+            G W <span>Eletromecânica</span>
+
+          </a>
+
+          <p>
+            Soluções em mecânica, elétrica, peças e
+            serviços automotivos em Vitória da Conquista - BA.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <h4>
+            Navegação
+          </h4>
+
+          <ul>
+
+            <li>
+              <a href="#inicio">Início</a>
+            </li>
+
+            <li>
+              <a href="#servicos">Serviços</a>
+            </li>
+
+            <li>
+              <a href="#sobre">Sobre</a>
+            </li>
+
+            <li>
+              <a href="#contato">Contato</a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <div>
+
+          <h4>
+            Empresa
+          </h4>
+
+          <ul>
+
+            <li>
+              CNPJ: 30.131.128/0001-55
+            </li>
+
+            <li>
+              Vitória da Conquista - BA
+            </li>
+
+            <li>
+              Bairro Brasil
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <span>
+          © <span id="year"></span>
+          G W Eletromecânica. Todos os direitos reservados.
+        </span>
+
+        <span>
+          CNPJ 30.131.128/0001-55
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =======================================================
+       WHATSAPP FLUTUANTE
+  ======================================================== -->
+
+  <!-- ALTERE O NÚMERO DO WHATSAPP -->
+  <a
+    href="https://wa.me/5577999999999"
+    target="_blank"
+    class="whatsapp"
+    aria-label="Falar no WhatsApp"
+  >
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+
+  <!-- =======================================================
+       JAVASCRIPT
+  ======================================================== -->
+
+  <script>
+
+    /* -------------------------------------------------------
+       ANO AUTOMÁTICO
+    ------------------------------------------------------- */
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+
+    /* -------------------------------------------------------
+       MENU MOBILE
+    ------------------------------------------------------- */
+
+    const menuToggle =
+      document.getElementById("menuToggle");
+
+    const menu =
+      document.getElementById("menu");
+
+    menuToggle.addEventListener("click", function () {
+
+      menu.classList.toggle("active");
+
+      const icon =
+        menuToggle.querySelector("i");
+
+      if (menu.classList.contains("active")) {
+
+        icon.classList.remove("fa-bars");
+        icon.classList.add("fa-xmark");
+
+      } else {
+
+        icon.classList.remove("fa-xmark");
+        icon.classList.add("fa-bars");
+
+      }
+
+    });
+
+
+    /* -------------------------------------------------------
+       FECHAR MENU AO CLICAR
+    ------------------------------------------------------- */
+
+    document.querySelectorAll(".menu a")
+      .forEach(function(link) {
+
+        link.addEventListener("click", function() {
+
+          menu.classList.remove("active");
+
+          const icon =
+            menuToggle.querySelector("i");
+
+          icon.classList.remove("fa-xmark");
+          icon.classList.add("fa-bars");
+
+        });
+
+      });
+
+
+    /* -------------------------------------------------------
+       ANIMAÇÕES AO ROLAR
+    ------------------------------------------------------- */
+
+    const revealElements =
+      document.querySelectorAll(".reveal");
+
+    const revealObserver =
+      new IntersectionObserver(
+        function(entries) {
+
+          entries.forEach(function(entry) {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add("active");
+
+            }
+
+          });
+
+        },
+        {
+          threshold: 0.12
+        }
+      );
+
+
+    revealElements.forEach(function(element) {
+
+      revealObserver.observe(element);
+
+    });
+
+
+    /* -------------------------------------------------------
+       FORMULÁRIO -> WHATSAPP
+    ------------------------------------------------------- */
+
+    const form =
+      document.getElementById("orcamentoForm");
+
+    form.addEventListener("submit", function(event) {
+
+      event.preventDefault();
+
+
+      const nome =
+        document.getElementById("nome").value.trim();
+
+      const telefone =
+        document.getElementById("telefone").value.trim();
+
+      const veiculo =
+        document.getElementById("veiculo").value.trim();
+
+      const servico =
+        document.getElementById("servico").value;
+
+      const mensagem =
+        document.getElementById("mensagem").value.trim();
+
+
+      /*
+       * IMPORTANTE:
+       * Troque este número pelo WhatsApp real da empresa.
+       *
+       * Formato:
+       * 55 + DDD + número
+       *
+       * Exemplo:
+       * 5577999999999
+       */
+
+      const numeroWhatsApp =
+        "5577999999999";
+
+
+      const texto =
+        `Olá, G W Eletromecânica!
+
+` +
+        `Gostaria de solicitar um orçamento.
+
+` +
+        `Nome: ${nome}
+` +
+        `Telefone: ${telefone}
+` +
+        `Veículo: ${veiculo || "Não informado"}
+` +
+        `Serviço: ${servico || "Não informado"}
+
+` +
+        `Mensagem:
+${mensagem || "Não informado"}`;
+
+
+      const url =
+        `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(texto)}`;
+
+
+      window.open(url, "_blank");
+
+    });
+
+
+    /* -------------------------------------------------------
+       MÁSCARA DE TELEFONE
+    ------------------------------------------------------- */
+
+    const telefoneInput =
+      document.getElementById("telefone");
+
+    telefoneInput.addEventListener("input", function(event) {
+
+      let value =
+        event.target.value.replace(/\D/g, "");
+
+      if (value.length > 11) {
+        value = value.substring(0, 11);
+      }
+
+      if (value.length <= 10) {
+
+        value = value.replace(
+          /^(\d{2})(\d)/,
+          "($1) $2"
+        );
+
+        value = value.replace(
+          /(\d{4})(\d)/,
+          "$1-$2"
+        );
+
+      } else {
+
+        value = value.replace(
+          /^(\d{2})(\d)/,
+          "($1) $2"
+        );
+
+        value = value.replace(
+          /(\d{5})(\d)/,
+          "$1-$2"
+        );
+
+      }
+
+      event.target.value = value;
+
+    });
+
+  </script>
+
+</body>
+</html>
